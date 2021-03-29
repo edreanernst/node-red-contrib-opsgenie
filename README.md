@@ -98,6 +98,16 @@ This field is also required when closing an alert. It is a string field that sho
 
 Please refer to the Opsgenie API documentation for descriptions of each of these identifier types.
 
+### Alert Read
+
+This node will pull the existing alerts from your Opsgenie setup according the configuration.
+
+#### Read msg.action
+This is a string field where the type of action can be specified (e.g. list)
+Possible values are:
+* "list"
+  * When triggered, this action will retrieve a list of the alerts from the [Alerts API Endpoint](https://docs.opsgenie.com/docs/alert-api#list-alerts) producing one message per alert.
+
 ## Examples
 
 ### Create a simple alert
@@ -133,19 +143,6 @@ Please refer to the Opsgenie API documentation for descriptions of each of these
     }
 }
 ```
----
-
-### Alert Read
-
-This node will pull the existing alerts from your Opsgenie setup according the configuration.
-
-#### Read msg.action
-This is a string field where the type of action can be specified (e.g. list)
-Possible values are:
-* "list"
-  * When triggered, this action will retrieve a list of the alerts from the [Alerts API Endpoint](https://docs.opsgenie.com/docs/alert-api#list-alerts) producing one message per alert.
-
-## Examples
 
 ### Get current alerts
 ```
@@ -153,7 +150,7 @@ Possible values are:
     "action": "list"
 }
 ```
-#### Example of a message produced per alert
+#### Example of a message produced per alert:
 ```
 "msg": {
   "event_type": "Opsgenie Alert",
