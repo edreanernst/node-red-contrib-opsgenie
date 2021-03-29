@@ -102,6 +102,16 @@ class OG {
         return result;
     }
 
+    async getAlerts() {
+        var result = {};
+        try {
+            result = await this.sendQuery('alerts', 'GET', {});
+        } catch(error) {
+            result = error;
+        }
+        return result;
+    }
+
     async createAlert(params) {
         var result = {};
         try {

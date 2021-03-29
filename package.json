@@ -2,6 +2,11 @@
     "author": {
         "name": "Edrean Ernst"
     },
+    "contributors": [
+        {
+            "name": "Pedro Torrezão"
+        }
+    ],
     "bugs": {
         "url": "https://github.com/edreanernst/node-red-contrib-opsgenie/issues"
     },
@@ -25,7 +30,8 @@
     "node-red": {
         "nodes": {
             "OpsgenieAlert": "src/opsgenie_alert_action.js",
-            "opsgenie-config": "src/opsgenie_config.js"
+            "opsgenie-config": "src/opsgenie_config.js",
+            "OpsgenieAlertRead": "src/opsgenie_alert_read.js"
         }
     }
 }
